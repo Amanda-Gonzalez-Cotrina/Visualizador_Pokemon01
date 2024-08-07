@@ -87,26 +87,38 @@ async function mostrarInformacionPokemon(nombre) {
     const data = await response.json();
 
     informacionPokemon.innerHTML = `
-      <h2>${data.name}</h2>
+    
+    <div class="topCard">
+    <div>
+    <h2>${data.name.toUpperCase()}</h2>
+    </div>
+    <div>
+    <p id="pEs">Tipo: ${data.types
+      .map((typeInfo) => typeInfo.type.name)
+      .join(" , ")}</p>
+    </div>
+    
+    </div>
+      <div class="imagenes">
       <img src="${data.sprites.front_default}" alt="${data.name}">
       <img src="${data.sprites.back_default}" alt="${data.name}">
-      <p>Altura: ${data.height / 10} m</p>
-      <p>Peso: ${data.weight / 10} kg</p>
-            <p>Puntos de vida: ${
-              data.stats.find((stat) => stat.stat.name === "hp").base_stat
-            }</p>
+      </div>
+      <div class="ptarjeta">
       <p>Ataque: ${
         data.stats.find((stat) => stat.stat.name === "attack").base_stat
       }</p>
       <p>Defensa: ${
         data.stats.find((stat) => stat.stat.name === "defense").base_stat
       }</p>
+      <p>Vida: ${
+        data.stats.find((stat) => stat.stat.name === "hp").base_stat
+      }</p>
       <p>Velocidad: ${
         data.stats.find((stat) => stat.stat.name === "speed").base_stat
       }</p>
-      <p>Tipo: ${data.types
-        .map((typeInfo) => typeInfo.type.name)
-        .join(", ")}</p>
+      <p>Altura: ${data.height / 10} m</p>
+      <p>Peso: ${data.weight / 10} kg</p>
+            </div>
         
         `;
     suggestions.innerHTML = "";
