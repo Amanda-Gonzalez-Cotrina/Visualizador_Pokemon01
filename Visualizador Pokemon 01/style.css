@@ -1,52 +1,151 @@
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(35, 61, 77);
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: 5px rgb(254, 202, 70) dotted;
-    padding: 20px;
-    /* Añade padding interno */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(35, 61, 77);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 5px rgb(254, 202, 70) dotted;
+  padding: 20px;
+  /* Añade padding interno */
 }
 
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
 
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 header section {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 header .pokeball {
-    max-width: 40px;
-    height: auto;
-    margin: 0 10px;
-    animation: spin 10s linear infinite;
+  max-width: 40px;
+  height: auto;
+  margin: 0 10px;
+  animation: spin 10s linear infinite;
 }
 
 header #titulo {
-    max-width: 150px;
-    height: auto;
+  max-width: 150px;
+  height: auto;
 }
 
 header h1 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: large;
-    color: rgb(254, 202, 70);
-    text-shadow: 2px 2px 4px #000000;
-    
-    margin-top: 15px;
-    
-    line-height: 1.2;
-   
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: large;
+  color: rgb(254, 202, 70);
+  text-shadow: 2px 2px 4px #000000;
+
+  margin-top: 15px;
+
+  line-height: 1.2;
 }
+@font-face {
+  font-family: "PokemonGB-Raeo";
+  font-weight: 100;
+  src: url(/fuentes/PokemonGb-RAeo.ttf);
+}
+@font-face {
+  font-family: "SugarBomb";
+
+  src: url(/fuentes/Moltors3D-WyE8n.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background-color: #fcca46;
+  height: 100%;
+}
+
+/* css Alex aqui debajo */
+
+section.informacionPokemon {
+  margin: 0 auto;
+  max-width: fit-content;
+
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #a1c181;
+}
+.topCard {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+}
+.topCard h2 {
+  /* font-family: "SugarBomb"; */
+  letter-spacing: 0.1rem;
+  color: #3b4cca;
+  /* background-color: whitesmoke; */
+  border-radius: 10px;
+  padding-bottom: 5px;
+}
+.topCard p {
+  font-family: "PokemonGB-Raeo";
+  color: rgb(255, 255, 255);
+  /* border: 1px solid white; */
+  padding: 10px;
+
+  font-size: 0.6rem;
+}
+
+div.imagenes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.imagenes img {
+  background-image: url(/imagenes/grass.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #4fdefbeb;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+
+  padding: 0.5rem;
+  margin: 1rem;
+  border-radius: 50%;
+  /* border-radius: 10px; */
+}
+
+.ptarjeta {
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+  margin-bottom: 1rem;
+  color: #233d4d;
+  /* border: 1px solid black; */
+
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  font-family: "PokemonGB-Raeo";
+}
+.ptarjeta p {
+  border-radius: 10px;
+  padding: 0.6rem;
+
+  background-color: #619b8a;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* hasta aqui codigo Alex */
