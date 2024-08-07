@@ -1,11 +1,83 @@
-.suggestions {
-  max-height: 150px;
-  max-width: 170px;
-  overflow-y: auto;
-  border: 1px solid #ccc;
-  padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Permanent+Marker&display=swap");
+
+* {
   margin: 0;
-  list-style: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fcca46;
+}
+
+form {
+  display: flex;
+  padding: 70px;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  padding: 20px;
+  max-width: 90vw;
+}
+
+input {
+  height: 70px;
+  width: 500px;
+  border-radius: 40px;
+  border: none;
+  background-color: #f8f1e077;
+  padding-left: 50px;
+  padding-right: 30px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.085);
+  font-family: "Dosis", sans-serif;
+  font-size: 25px;
+  color: #619b8a;
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input:focus {
+  background-color: beige;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.221);
+}
+
+.suggestions {
+  position: absolute;
+  top: 80%;
+  left: 50px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.152);
+  z-index: 1000;
+  max-height: 200px;
+  width: 300px;
+  overflow: auto;
+  font-family: "Dosis", sans-serif;
+  font-size: 20px;
+  color: #fccb46;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.086);
+}
+
+.suggestions::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+.suggestions::-webkit-scrollbar-track {
+  background: bisque;
+}
+
+.suggestions::-webkit-scrollbar-thumb {
+  background: #fcca46;
+  border-radius: 5px;
 }
 
 .suggestions li {
@@ -14,5 +86,26 @@
 }
 
 .suggestions li:hover {
-  background-color: #f0f0f0;
+  background-color: #619b8a;
+}
+
+button {
+  min-height: 80px;
+  min-width: 80px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  background-image: url(Pokemon-Pokeball-Transparent.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  background-color: #fcca46;
+  color: #fcca46;
+  font-family: "Dosis", sans-serif;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+  color: azure;
 }
