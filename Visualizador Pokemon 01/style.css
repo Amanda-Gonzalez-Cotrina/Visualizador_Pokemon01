@@ -89,6 +89,34 @@ input:focus {
     transform: rotate(360deg);
   }
 }
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(35, 61, 77);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 5px rgb(254, 202, 70) dotted;
+  padding: 20px;
+  /* Añade padding interno */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+header section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
 .suggestions li:hover {
   background-color: #619b8a;
@@ -113,4 +141,55 @@ button {
 button:hover {
   transform: scale(1.1);
   color: azure;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(35, 61, 77);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 5px rgb(254, 202, 70) dotted;
+  padding: 20px;
+  /* Añade padding interno */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+header section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+header .pokeball {
+  max-width: 40px;
+  height: auto;
+  margin: 0 10px;
+  animation: spin 10s linear infinite;
+}
+
+header #titulo {
+  max-width: 150px;
+  height: auto;
+}
+
+header h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: large;
+  color: rgb(254, 202, 70);
+  text-shadow: 2px 2px 4px #000000;
+
+  margin-top: 15px;
+
+  line-height: 1.2;
 }
