@@ -80,9 +80,14 @@ input:focus {
   border-radius: 5px;
 }
 
-.suggestions li {
-  padding: 8px;
-  cursor: pointer;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .suggestions li:hover {
