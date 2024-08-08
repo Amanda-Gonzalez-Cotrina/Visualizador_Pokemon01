@@ -22,9 +22,8 @@ html {
 main {
   background-image: url(/imagenes/fondo.jpg);
   background-size: cover;
-
-  height: 100vh;
   background-position: center;
+  height: 120vh;
 }
 
 /* animaciones pokeball */
@@ -94,6 +93,7 @@ section.informacionPokemon {
   /* background-image: url(/imagenes/pokeballAlex.png);
   background-position: contain; */
   margin: 0 auto;
+
   max-width: fit-content;
   color: #e0e1dd;
   border-radius: 10px;
@@ -285,5 +285,14 @@ button:hover {
 @media (min-width: 700px) {
   .imagenes img {
     height: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  input {
+    width: 280px;
+    height: 70px;
+    font-size: 19px;
+    padding-left: 30px;
   }
 }
