@@ -6,12 +6,12 @@
 @font-face {
   font-family: "PokemonGB-Raeo";
   font-weight: 100;
-  src: url(/fuentes/PokemonGb-RAeo.ttf);
+  src: url(./fuentes/PokemonGb-RAeo.ttf);
 }
 @font-face {
   font-family: "SugarBomb";
 
-  src: url(/fuentes/Moltors3D-WyE8n.ttf);
+  src: url(./fuentes/Moltors3D-WyE8n.ttf);
 }
 
 /* /////// =========================CODIGO ALBERTO ==============/////// */
@@ -21,7 +21,7 @@ html {
 }
 
 main {
-  background-image: url(/imagenes/fondo.jpg);
+  background-image: url(./imagenes/fondo.jpg);
   background-size: cover;
   background-position: center center; /* Centra la imagen en ambas direcciones */
   background-attachment: fixed;
@@ -92,7 +92,7 @@ header h1 {
 
 section.informacionPokemon {
   border: 5px solid #e0e1dd;
-  /* background-image: url(/imagenes/pokeballAlex.png);
+  /* background-image: url(./imagenes/pokeballAlex.png);
   background-position: contain; */
   margin: 0 auto;
 
@@ -136,7 +136,7 @@ div.imagenes {
 }
 
 .imagenes img {
-  background-image: url(/imagenes/grass.png);
+  background-image: url(./imagenes/grass.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #4fdefbeb;
